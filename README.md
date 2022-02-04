@@ -2,7 +2,22 @@
 Run `node break_nerdle.mjs` to get the answer of today's nerdle.
 Download `node.js` if you don't already have it.
 
-You can change mode to `'mini'` or change the date to a specific date with `new Date('the specific date')`, e.g. `new Date('2022-02-04')`. You may just increase or decrease the `diff` variable as well to get your specific date.
+Usage: node break_nerdle.mjs [options]
+Options:
+    -m or --mini: set mode to "mini".
+    -d or --diff <number of days>: set the date to the specific date(if -D is used) or today add the number of days.
+    -D or --date <date>: set the date to the specific date.
+    -h or --help: display this information.
+
+The default date will the today. Note that Nerdle uses UTC time.
+
+Example:
+
+If you run the following command,
+
+`node break_nerdle.mjs -m -D 2022-02-05 -d 1`
+
+you will get the answer of Nerdle on the 6th Feb, 2022. (one day after 5th Feb, 2022).
 
 # How it works?
 
