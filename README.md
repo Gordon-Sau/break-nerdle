@@ -1,6 +1,10 @@
 # break-nerdle
-clone the repo and run `node break_nerdle.mjs` to get the answer of today's Nerdle(https://nerdlegame.com/).
+
+Clone the repo or copy the two `.mjs` and store them under the same directory.
+
 Download `node.js` if you don't already have it.
+
+Then, run `node break_nerdle.mjs` to get the answer of today's Nerdle(https://nerdlegame.com/).
 
 Usage: node break_nerdle.mjs [options]
 Options:
@@ -9,7 +13,7 @@ Options:
     -D or --date <date>: set the date to the specific date.
     -h or --help: display this information.
 
-The default date will the today. Note that Nerdle uses UTC time.
+The default date will be today. Note that Nerdle uses UTC time.
 
 Example:
 
