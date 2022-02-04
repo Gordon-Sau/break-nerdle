@@ -56,6 +56,21 @@ function parse_argv(argv) {
         1
     ];
 
+    const help = [
+        () => {
+            console.log(`
+Usage: node break_nerdle.mjs [options]
+Options:
+    -m or --mini: set mode to "mini".
+    -d or -diff <number of days>: set the date to the specific date(if -D is used) or today add the number of days.
+    -D or -date <date>: set the date to the specific date.
+
+The default date will the today. Note that Nerdle uses UTC time.
+`)
+        },
+        -1
+    ];
+
     const arg_mapping = {
         "-m": set_mini,
         "--mini": set_mini,
@@ -63,6 +78,8 @@ function parse_argv(argv) {
         "--Date": set_date,
         "-d": set_diff,
         "--diff": set_diff,
+        "-h": help,
+        "--help": help
     };
 
     let ret = {
@@ -78,6 +95,12 @@ function parse_argv(argv) {
         if (arg.value in arg_mapping) {
             const flag = arg.value;
             const [func, argc] = arg_mapping[flag];
+
+            if (argc === -1) {
+                func();
+                exit(0);
+            }
+
             const args = [];
 
             while (args.length < argc) {
