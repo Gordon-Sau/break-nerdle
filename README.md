@@ -1,5 +1,5 @@
 # break-nerdle
-Run `node break_nerdle.mjs` to get the answer of today's nerdle.
+clone the repo and run `node break_nerdle.mjs` to get the answer of today's Nerdle(https://nerdlegame.com/).
 Download `node.js` if you don't already have it.
 
 Usage: node break_nerdle.mjs [options]
